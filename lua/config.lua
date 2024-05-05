@@ -10,3 +10,7 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 
+-- setup fillchars
+vim.opt.fillchars = {
+        eob = " "
+}
