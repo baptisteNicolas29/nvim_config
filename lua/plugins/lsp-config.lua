@@ -25,8 +25,11 @@ return {
         jedi_completion = {fuzzy = true}
       }
       vim.keymap.set('n', 'gh', vim.lsp.buf.hover, {})
+      vim.keymap.set('n', 'gr', vim.lsp.buf.rename, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
       vim.keymap.set({'n', 'v'}, 'ga', vim.lsp.buf.code_action, {})
+      -- vim.keymap.set('n', 'gi', vim.lsp.buf.references, {})
+      vim.keymap.set('n', 'gi', require('telescope.builtin').lsp_references, {})
     end
   },
 }

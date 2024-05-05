@@ -1,9 +1,9 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set number")
-vim.cmd("set relativenumber")
+-- vim.cmd("set expandtab")
+-- vim.cmd("set tabstop=4")
+-- vim.cmd("set softtabstop=4")
+-- vim.cmd("set shiftwidth=4")
+-- vim.cmd("set number")
+-- vim.cmd("set relativenumber")
 
 -- install lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -24,4 +24,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- require("nvim-tree").setup()
-require("lualine").setup()
+
+
+-- setup userConfiguration
+require('config')
+vim.cmd 'colorscheme material-darker'
