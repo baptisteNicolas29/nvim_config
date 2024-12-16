@@ -28,8 +28,6 @@ return {
       vim.keymap.set('n', '<leader>rr', vim.lsp.buf.rename, {})
       vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, {})
       vim.keymap.set({'n', 'v'}, '<leader>la', vim.lsp.buf.code_action, {})
-      -- vim.keymap.set('n', 'gi', vim.lsp.buf.references, {})
-      -- vim.keymap.set('n', '<leader>ld', require('telescope.builtin').lsp_definitions, {})
       vim.keymap.set('n', '<leader>lr', require('telescope.builtin').lsp_references, {})
     end
   },
