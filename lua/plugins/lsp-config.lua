@@ -24,11 +24,13 @@ return {
       lspconfig.pylsp.setup {
         jedi_completion = {fuzzy = true}
       }
-      vim.keymap.set('n', '<leader>lh', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', '<leader>rr', vim.lsp.buf.rename, {})
-      vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, {})
-      vim.keymap.set({'n', 'v'}, '<leader>la', vim.lsp.buf.code_action, {})
-      vim.keymap.set('n', '<leader>lr', require('telescope.builtin').lsp_references, {})
+      -- vim.keymap.set('n', '<leader>lh', vim.lsp.buf.hover, {})
+      -- vim.keymap.set('n', '<leader>rr', vim.lsp.buf.rename, {})
+      -- vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, {})
+      -- vim.keymap.set({'n', 'v'}, '<leader>la', vim.lsp.buf.code_action, {})
+      -- vim.keymap.set('n', '<leader>lr', require('telescope.builtin').lsp_references, {})
+      vim.o.foldmethod = "expr"
+      vim.o.foldexpr = "v:lua.vim.lsp.foldexpr()"
     end
   },
 }
